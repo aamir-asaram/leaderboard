@@ -10,7 +10,6 @@ body {
 h1 {
   font-size: 3rem;
   width: 100%;
-
 }
 
 #container {
@@ -45,17 +44,17 @@ h1 {
   border: 2px solid #000;
 }
 
-/* make every second li a different color */
-#entries li:nth-child(even) {
-  background-color: rgba(197, 197, 197, 0.3);
-}
-
 #entries li {
   display: flex;
   align-items: center;
   padding-block: 12px;
   width: 100%;
   padding-left: 10px;
+}
+
+/* make every second li a different color */
+#entries li:nth-child(even) {
+  background-color: rgba(197, 197, 197, 0.3);
 }
 
 #score {
@@ -84,4 +83,3 @@ h1 {
   justify-content: center;
   margin-bottom: 16px;
 }
-
