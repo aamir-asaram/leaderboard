@@ -1,6 +1,6 @@
 import './style.css';
 
-const gameID = 'lbiRP4qGSp6Pffahuzll';
+const gameID = 'pMG4J8H5idmHwUm802HW';
 
 const postScore = async (user, score) => {
   try {
