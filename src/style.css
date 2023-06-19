@@ -1,3 +1,85 @@
 body {
-  background-color: bisque;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  width: 100%;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+}
+
+#leaderboard {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 6%;
+}
+
+#heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+#heading * {
+  margin-inline: 10px;
+}
+
+#entries {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #000;
+}
+
+#entries li {
+  display: flex;
+  align-items: center;
+  padding-block: 12px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+/* make every second li a different color */
+#entries li:nth-child(even) {
+  background-color: rgba(197, 197, 197, 0.3);
+}
+
+#score {
+  width: 30%;
+  margin-inline: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+#scoreForm {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+#scoreForm input {
+  height: 30px;
+  margin: 10px;
+  padding: 2px;
+}
+
+#submit {
+  width: 30%;
+  align-self: flex-end;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 16px;
 }

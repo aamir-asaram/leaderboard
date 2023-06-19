@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>Leaderboard</title>
+    <script src="index.js" type="module"></script>
 </head>
 <body>
-    <section>
-        <h1>Today's To Do</h1>
-        <input type="text" id="input" placeholder="Add to your list...">
-      </section>
+    <h1>Leaderboard</h1>
+    <div id="container">
+        <section id="leaderboard">
+            <div id="heading">
+                <h2 id="scores">Recent Scores</h2>
+                <button id="refresh" class="btn">Refresh</button>
+            </div>
+            <ul id="entries">
+                <!-- The li elements will be added here by JavaScript -->
+                <li>Name: 100</li>
+                <li>Name: 80</li>
+                <li>Name: 9</li>
+                <li>Name: 67</li>
+                <li>Name: 45</li>
+            </ul>
+        </section>
+        <section id="score">
+            <h2 id="addscore">Add your score</h2>
+            <form id="scoreForm">
+                <input type="text" id="name" name="name" placeholder="Your name..">
+                <input type="number" id="scoreinput" name="score" placeholder="Your score..">
+                <input type="button" id="submit" class="btn" value="Submit">
+            </form>
+        </section>
+    </div>
 </body>
 </html>
