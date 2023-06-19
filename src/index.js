@@ -7,16 +7,15 @@ const postScore = async (name, score) => {
     const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`, {
       method: 'POST',
       body: JSON.stringify({
-        "user": name,
-        "score": score,
+        user: name,
+        score: score,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
     });
-    const json = await response.json();
-    console.log(json);
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.log(error);
   }
 };
@@ -29,16 +28,11 @@ const getScores = async () => {
 
 const submitButton = document.getElementById('submit');
 submitButton.addEventListener('click', () => {
-  let name = document.getElementById('name');
-  let score = document.getElementById('scoreinput');
+  const name = document.getElementById('name');
+  const score = document.getElementById('scoreinput');
   postScore(name.value, score.value);
   name.value = '';
   score.value = '';
-});
-
-const refreshButton = document.getElementById('refresh');
-refreshButton.addEventListener('click', () => {
-  render();
 });
 
 const render = () => {
@@ -51,5 +45,10 @@ const render = () => {
     });
   });
 };
+
+const refreshButton = document.getElementById('refresh');
+refreshButton.addEventListener('click', () => {
+  render();
+});
 
 render();
